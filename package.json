@@ -4,6 +4,8 @@
   "description": "CSS spinners for React",
   "main": "index.js",
   "scripts": {
+    "prebuild": "rimraf dist",
+    "build": "rollup -c",
     "format": "prettier src/*.js --write"
   },
   "husky": {
@@ -12,7 +14,10 @@
     }
   },
   "lint-staged": {
-    "*.js": ["yarn format", "git add"]
+    "*.js": [
+      "yarn format",
+      "git add"
+    ]
   },
   "repository": {
     "type": "git",
@@ -30,6 +35,8 @@
   },
   "homepage": "https://github.com/sam10105/kasyoki-spinners#readme",
   "devDependencies": {
+    "@rollup/plugin-commonjs": "^15.1.0",
+    "@rollup/plugin-node-resolve": "^9.0.0",
     "eslint": "^7.12.0",
     "eslint-config-airbnb": "^18.2.0",
     "eslint-config-prettier": "^6.14.0",
@@ -39,6 +46,8 @@
     "eslint-plugin-react-hooks": "^4.2.0",
     "husky": "^4.3.0",
     "lint-staged": "^10.4.2",
-    "prettier": "^2.1.2"
+    "prettier": "^2.1.2",
+    "rimraf": "^3.0.2",
+    "rollup": "^2.32.1"
   }
 }
