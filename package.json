@@ -2,7 +2,11 @@
   "name": "kasyoki-spinners",
   "version": "1.0.0",
   "description": "CSS spinners for React",
-  "main": "index.js",
+  "main": "dist/bundle.cjs.js",
+  "module": "dist/bundle.es.js",
+  "sideEffects": [
+    "*.css"
+  ],
   "scripts": {
     "prebuild": "rimraf dist",
     "build": "rollup -c",
