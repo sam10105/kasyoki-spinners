@@ -7,10 +7,14 @@
   "sideEffects": [
     "*.css"
   ],
+  "files": [
+    "dist"
+  ],
   "scripts": {
     "prebuild": "rimraf dist",
     "build": "rollup -c",
-    "format": "prettier src/*.js --write"
+    "format": "prettier src/*.js --write",
+    "prepublishOnly": "yarn build"
   },
   "husky": {
     "hooks": {
