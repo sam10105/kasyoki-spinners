@@ -1,7 +1,5 @@
-import React from 'react';
-
-const Func = () => {
-  return <p>halloween</p>;
-};
-
-export default Func;
+export * from './Circle';
+export * from './DualRing';
+export * from './Facebook';
+export * from './Heart';
+export * from './Ring';

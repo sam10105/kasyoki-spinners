@@ -2,6 +2,7 @@ import babel from '@rollup/plugin-babel';
 import { terser } from 'rollup-plugin-terser';
 import commonjs from '@rollup/plugin-commonjs';
 import { nodeResolve } from '@rollup/plugin-node-resolve';
+import postcss from 'rollup-plugin-postcss';
 
 const production = !process.env.ROLLUP_WATCH;
 
@@ -28,7 +29,13 @@ export default {
   plugins: [
     babel({ exclude: 'node_modules/**', babelHelpers: 'bundled' }),
     commonjs(),
-    nodeResolve(),
+    nodeResolve({
+      extensions: ['.js', '.jsx'],
+    }),
+    postcss({
+      extract: 'style.min.css',
+      minimize: true,
+    }),
     // minify production code
     production && terser(),
   ],
