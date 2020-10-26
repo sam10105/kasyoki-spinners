@@ -1,3 +1,7 @@
-const func = () => {};
+import React from 'react';
 
-export default func;
+const Func = () => {
+  return <p>halloween</p>;
+};
+
+export default Func;
