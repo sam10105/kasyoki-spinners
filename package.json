@@ -1,0 +1,24 @@
+{
+  "name": "kasyoki-spinners",
+  "version": "1.0.0",
+  "description": "CSS spinners for React",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sam10105/kasyoki-spinners.git"
+  },
+  "keywords": [
+    "react",
+    "CSS",
+    "spinners"
+  ],
+  "author": "Sam Kasyoki",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/sam10105/kasyoki-spinners/issues"
+  },
+  "homepage": "https://github.com/sam10105/kasyoki-spinners#readme"
+}
