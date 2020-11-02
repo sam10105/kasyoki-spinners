@@ -15,7 +15,15 @@
     "prebuild": "rimraf dist",
     "build": "rollup -c",
     "format": "prettier src/*.js --write",
+    "test": "jest",
+    "test:staged": "jest --findRelatedTests",
+    "test:coverage": "jest --coverage",
     "prepublishOnly": "yarn build"
+  },
+  "jest": {
+    "moduleNameMapper": {
+      "\\.css$": "<rootDir>/mocks/styles.js"
+    }
   },
   "husky": {
     "hooks": {
@@ -25,6 +33,7 @@
   "lint-staged": {
     "*.js": [
       "yarn format",
+      "yarn test:staged",
       "git add"
     ]
   },
@@ -50,6 +59,8 @@
     "@rollup/plugin-babel": "^5.2.1",
     "@rollup/plugin-commonjs": "^15.1.0",
     "@rollup/plugin-node-resolve": "^9.0.0",
+    "@testing-library/react": "^11.1.0",
+    "babel-jest": "^26.6.1",
     "eslint": "^7.12.0",
     "eslint-config-airbnb": "^18.2.0",
     "eslint-config-prettier": "^6.14.0",
@@ -58,9 +69,11 @@
     "eslint-plugin-react": "^7.21.5",
     "eslint-plugin-react-hooks": "^4.2.0",
     "husky": "^4.3.0",
+    "jest": "^26.6.1",
     "lint-staged": "^10.4.2",
     "prettier": "^2.1.2",
     "react": "^17.0.1",
+    "react-dom": "^17.0.1",
     "rimraf": "^3.0.2",
     "rollup": "^2.32.1",
     "rollup-plugin-postcss": "^3.1.8",
