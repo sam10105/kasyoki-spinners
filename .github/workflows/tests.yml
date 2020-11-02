@@ -1,4 +1,4 @@
-name: Coveralls
+name: tests
 
 on: ['push', 'pull_request']
 
